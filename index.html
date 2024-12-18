@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+    <div class="side-panel">
+        <h2 class="word-art">Portfolio</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#Contact ">Contact</ahref></a>
+        </nav>
+    </div>
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home">
+            <h2 class="word-art">Home  </h2>
+            <div class="animated-text" ><h3>Welcome to my Portfolio!</h3></div>
+             <!-- Profile Picture or Welcome Image -->
+             <div class="profile-container">
+                <img src="images/myimg.jpg" alt="Profile Picture" class="profile-pic">
+                <p class="profile-name">Shreya Karmakar</p> <!-- Your name under the profile picture -->
+            </div>
+            <h3 class="section-heading">About Me</h3>
+            <p>
+                I am a third-year Computer Science Engineering undergraduate with a keen interest in exploring and working
+               with emerging technologies. Skilled in data analysis and database management, I have experience designing and
+               implementing efficient, data-driven systems. I thrive in collaborative environments, turning challenges into
+               practical, innovative solutions that deliver impact.
+               </p>
+            <h4 class="section-heading">Educational Details</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Year of Completion</th>
+                        <th>Grade/Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelor of Technology (Computer Science)</td>
+                        <td>GITAM University</td>
+                        <td>2026</td>
+                        <td>9.1 CGPA</td>
+                    </tr>
+                    <tr>
+                        <td>Higher Secondary (12th Grade)</td>
+                        <td>FIITJEE</td>
+                        <td>2022</td>
+                        <td>91.3%</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary (10th Grade)</td>
+                        <td>Timpany Senior Secondary School</td>
+                        <td>2020</td>
+                        <td>91%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="word-art">Skills</h2>
+            <button class="toggle-btn" onclick="toggleSection('skills-list')">Show/Hide Skills</button>
+            <ul id="skills-list">
+                <li>Programming Languages: C,Python,Java,HTML,CSS, JavaScript, C++</li>
+                <li>Web Development: HTML, CSS, React, Node.js</li>
+                <li>Database Management: MySQL, MongoDB</li>
+                <li>AR/VR: Unity Engine, Blender</li>
+                <li>Data Analytics and Visualization: Tableau, PowerBI</li>
+                <li> Machine Learning and Neural Networks</li>
+                <li>UI/UX: Figma</li>
+                <li>Tools: Git, VS Code</li>
+            </ul>
+            <h3 class="section-heading">Tech Stack</h3>
+    <div class="tech-stack-icons">
+        <img src="images/html.png" alt="HTML" title="HTML">
+        <img src="images/css.jpg" alt="CSS" title="CSS">
+        <img src="images/js.jpg" alt="JavaScript" title="JavaScript">
+        <img src="images/c.png" alt="C" title="C">
+        <img src="images/c++.jpg" alt="c++" title="c++">
+        <img src="images/python.jpg" alt="python" title="python">
+        <img src="images/java-logo.png" alt="Java" title="Java">
+        <img src="images/nodejs.jpg" alt="node.js" title="node.js">
+        <img src="images/react.jpg" alt="React" title="React">
+        <img src="images/mongodb.jpg" alt="MongoDB" title="MongoDB">
+        <img src="images/mysql.jpg" alt="MySQL" title="MySQL">
+        <img src="images/unity.jpg" alt="unity" title="unity">
+        <img src="images/blender.jpg" alt="blender" title="blender">
+        <img src="images/Power BI.png" alt="power bi" title="power bi">
+        <img src="images/tableau.jpg" alt="tableau" title="tableau">
+        <img src="images/figma.jpg" alt="figma" title="figma">
+        <img src="images/vscode.jpg" alt="vscode" title="vscode">
+        <img src="images/git.jpg" alt="Git" title="Git">
+    </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="word-art">Projects</h2>
+            <button class="toggle-btn" onclick="toggleSection('projects-list')">Show/Hide Projects</button>
+            <ul id="projects-list">
+                <li>Travel Itinerary and Budget Planner</li>
+                <li>YouTube Video Trending Analysis</li>
+                <li>AI Chatbot for Non-English Speakers</li>
+                <li>Instagram trend analysis</li>
+                <li>Interactive VR Gallery</li>
+            </ul>
+        </section>
+        <section id="Contact">
+            <h1 class="word-art">Contact</h1>
+            <p>E-Mail:     <a href="mailto:shreya.karmakar2004@gmail.com " style="color: #9c62c0; text-decoration: none; font-weight: bold;">shreya.karmakar2004@gmail.com</a></p>
+            <p>Phone no.:  <a href="tel:+91 7995339702" style="color: #9c62c0; text-decoration: none; font-weight: bold;">+91 7995339702</a></p>
+            <div class="social-buttons">
+                <a href="https://github.com/shreyakarmakar04" target="_blank" class="social-button github">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/shreya-karmakar-110b57259" target="_blank" class="social-button linkedin">
+                    <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG24.png" alt="LinkedIn" class="social-icon">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </div>
+     <!-- Script Dependencies -->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,400 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f9;
+    color: #090909;
+    scroll-behavior: smooth;
+}
+/* Profile Picture Styles */
+.profile-pic {
+    display: block;
+    margin: 20px auto; /* Center the image */
+    width: 150px; /* Adjust size */
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    border: 3px solid #333; /* Initial border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0.2, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transition for transform, border color, and shadow */
+}
+
+/* Hover Effect */
+.profile-pic:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    border-color: #bc8dbb; /* Change border color on hover */
+    box-shadow: 0 6px 12px rgba(255, 254, 254, 0.945); /* Slightly stronger shadow on hover */
+}
+/* Side Panel Styles */
+.side-panel {
+    width: 250px;
+    background-color: #333;
+    height: 100%;
+    padding: 1rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure items align at the top */
+}
+
+/* Portfolio Heading */
+.side-panel h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0; /* Remove any default margin */
+    padding-bottom: 2rem; 
+    animation: fadeIn 2s ease infinite;
+}
+
+/* Navigation Links */
+.side-panel nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Reduced gap between links */
+    padding-top: 0.5rem; /* Added padding to adjust space at the top */
+}
+
+.side-panel nav a {
+    color: rgb(253, 252, 251);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.side-panel nav a:hover {
+    background-color: #e199f9;
+    transform: scale(1.1);
+}
+
+/* Content Area */
+.content {
+    margin-left: 260px;
+    padding: 2rem;
+    flex-grow: 1;
+    opacity: 0; 
+    transform: translateY(-20px); /* Initial translation downwards */
+    animation: slideIn 0.5s ease forwards;
+  }
+
+/* Section Animations */
+section {
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease;
+}
+table th, table td {
+    border: 1.5px solid #ddd;
+    padding: 5px;
+    text-align: left;
+}
+#skills {
+    margin-top: 300px; /* Add extra margin to prevent overlapping with the Education table */
+}
+
+/* Toggle Button */
+button.toggle-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+button.toggle-btn:hover {
+    background-color: #7e57be;
+    transform: scale(1.05);
+}
+
+/* Lists */
+.skills-list, .projects-list {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Initially hidden */
+}
+.skills-list li, .projects-list li {
+    margin: 0.5rem 0;
+    margin-top:200px
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #050505;
+    z-index: -1; /* Ensure it stays behind other elements */
+}
+
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* Section Initial State */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+}
+
+/* Section Reveal Animation */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: block; /* Show section when toggled */
+}
+
+/* Reset Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Particles.js Container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send to back */
+    background: #010101; /* Optional: fallback background color */
+}
+
+/* Main Content */
+header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 254, 254);
+    background: rgba(6, 6, 6, 0.7);
+}
+
+section {
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+/* Ensure content is above particles */
+main, section, header {
+    position: relative;
+    z-index: 1;
+}
+.animated-text {
+    display: inline-block; /* Ensures the element can animate its width */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides the overflowed text */
+    border-right: 0.15em solid rgb(14, 14, 14); /* Simulates the typing cursor */
+    width: 0; /* Start the width at 0 for the typing effect */
+    color:rgb(224, 193, 142);
+    animation: 
+        typing 2.5s steps(40) forwards infinite, /* Typewriter effect */
+        blink-caret 0.75s step-end infinite; /* Blinking cursor */
+}
+
+/* Keyframes for Typewriter Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.side-panel nav a.active {
+    background-color: #aeadac; /* Highlight color */
+    color: #fff; /* Text color for the active link */
+    font-weight: bold; /* Make it stand out */
+}
+/* Word Art Style */
+.word-art {
+    font-size: 2.5rem; /* Adjust size */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    /* Background Gradient for Text */
+    background: linear-gradient(45deg, #d469fb,#f2bdf2, #7571f8);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit property for Chrome, Safari, Edge */
+    color: transparent; /* Ensures transparency for WebKit */
+    -webkit-text-fill-color: transparent; /* WebKit-specific transparency */
+    
+    /* Shadow for Depth */
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+
+    /* Animation for Gradient Movement */
+    animation: gradientMove 3s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Adjust Responsive Font Sizes */
+@media (max-width: 768px) {
+    .word-art {
+        font-size: 1.2rem; /* Smaller font for mobile */
+    }
+}
+/* Contact Section Styles */
+.contact-details {
+    margin-top: 2rem; /* Add space between the heading and details */
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 5px; /* Increase spacing between lines */
+    color: #9e75b3; /* Text color */
+    padding-bottom: 20px;
+}
+
+/* Links Styling for Email and Phone */
+.contact-details a {
+    color: #9c62c0 !important; /* Email and phone link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the links bold */
+}
+
+.contact-details a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #a575d4 !important; /* Darker shade for hover effect */
+}
+
+/* Adjust Word-Art Heading */
+.word-art {
+    font-size: 2.5rem; /* Adjust heading size */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem; /* Add space below heading */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 4px 6px rgba(220, 214, 214, 0.692);
+    animation: gradientMove 2s linear infinite;
+}
+.section-heading {
+    font-size: 1.5em;
+    color: #ae90d4; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.429); /* Subtle shadow for effect */
+}
+.tech-stack-icons {
+    display: flex;
+    justify-content: center; /* Center-align the icons */
+    align-items: center;
+    flex-wrap: wrap; /* Wrap to next line if necessary */
+    gap: 15px; /* Add spacing between icons */
+    margin: 20px 0; /* Add margin above and below the icons */
+}
+
+.tech-stack-icons img {
+    width: 60px; /* Small icon size */
+    height: 60px; /* Maintain aspect ratio */
+    border-radius: 15px; /* Optional: Add a slight rounded edge */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add hover effects */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+.tech-stack-icons img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Add shadow on hover */
+}
+/* Style for the profile container */
+.profile-container {
+    text-align: center; /* Centers the content */
+    margin-top: 20px; /* Adds some space above the profile section */
+}
+/* Style for the name */
+.profile-name {
+    margin-top: 10px; /* Adds space between the image and name */
+    font-size: 1.5rem; /* Adjust the size of your name */
+    font-weight: bold; /* Makes the name bold */
+    color: #cc9f35; /* You can change the color */
+}
+/* Reduce space between projects and contact sections */
+#projects {
+    margin-bottom: 10px; /* Reduce bottom margin to bring it closer to the contact section */
+    padding-bottom: 0; /* Ensure there's no extra padding */
+}
+
+#Contact {
+    margin-top: 10px; /* Reduce top margin of Contact section */
+    padding-top: 0; /* Remove unnecessary padding */
+}
+/* Style for Social Buttons */
+.social-buttons {
+    display: flex;
+    gap: 20px; /* Add space between buttons */
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px; /* Space between contact details and buttons */
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #000; /* Border color for the button */
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #fff; /* White text on hover */
+}
+
+.social-icon {
+    width: 20px; /* Set icon size */
+    height: 20px; /* Set icon size */
+    margin-right: 8px; /* Space between icon and text */
+}
